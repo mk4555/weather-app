@@ -9,6 +9,11 @@
   height: 100vh;
 }
 
-/* .main {
+.main {
+  text-align: center;
   background: url("img/background.jpg") center center no-repeat;
-} */
+  margin: 0 auto;
+  width: 80%;
+  height: 100vh;
+  font-family: 'Source Serif Pro', serif;
+}
