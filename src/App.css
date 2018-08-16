@@ -11,9 +11,16 @@
 
 .main {
   text-align: center;
-  background: url("img/background.jpg") center center no-repeat;
   margin: 0 auto;
+  background: url("img/background.jpg") center center no-repeat;
   width: 80%;
   height: 100vh;
   font-family: 'Source Serif Pro', serif;
+}
+
+.title-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }

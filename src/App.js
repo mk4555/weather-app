@@ -37,7 +37,9 @@ class App extends React.Component {
       <div>
         <div className="wrapper">
           <div className="main">
-            <Titles />
+            <div className="title-container">
+              <Titles />
+            </div>
             <Form getWeather={this.getWeather} />
               <Weather
                 temperature={this.state.temperature}
