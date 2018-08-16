@@ -2,7 +2,7 @@ import React from 'react';
 import Titles from './components/Titles';
 import Form from './components/Form';
 import Weather from './components/Weather';
-
+import { Motion, spring } from 'react-motion';
 const API_KEY = "24074fbe58384e2412a51ad2b43b1976";
 
 class App extends React.Component {
@@ -38,14 +38,22 @@ class App extends React.Component {
         <div className="wrapper">
           <Titles />
           <Form getWeather={this.getWeather} />
-          <Weather
-            temperature={this.state.temperature}
-            city={this.state.city}
-            country={this.state.country}
-            humidity={this.state.humidity}
-            description={this.state.description}
-            error={this.state.error}
-          />
+          <Motion
+            defaultStyle={{x: -200, opacity: 0}}
+            style={{x: spring(0), opacity: spring(1)}}
+          >
+            {(style) => (
+              <Weather style={{transform: `translateX(${style.x})`, opacity: style.opacity}}
+                  temperature={this.state.temperature}
+                  city={this.state.city}
+                  country={this.state.country}
+                  humidity={this.state.humidity}
+                  description={this.state.description}
+                  error={this.state.error}
+                  opacity={style.opacity}
+                />
+            )}
+          </Motion>
         </div>
       </div>
     )
