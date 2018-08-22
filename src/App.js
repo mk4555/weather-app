@@ -2,8 +2,6 @@ import React from 'react';
 import Titles from './components/Titles';
 import Form from './components/Form';
 import Weather from './components/Weather';
-import { Motion, spring } from 'react-motion';
-import Center from 'react-center';
 const API_KEY = "24074fbe58384e2412a51ad2b43b1976";
 
 class App extends React.Component {
@@ -41,6 +39,7 @@ class App extends React.Component {
             <div className="title-container">
               <Titles />
             </div>
+            <div className="form-container">
               <Form getWeather={this.getWeather} />
                 <Weather
                   temperature={this.state.temperature}
@@ -50,6 +49,7 @@ class App extends React.Component {
                   description={this.state.description}
                   error={this.state.error}
                 />
+            </div>
           </div>
         </div>
       </div>

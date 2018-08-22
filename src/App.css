@@ -19,13 +19,13 @@
 }
 
 .title-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+  height: 20vh;
+  left: 0;
+  right: 0;
 }
 
 .form-container {
+  clear: both;
   margin: 0 auto;
   width: 500px;
   height: 500px;
